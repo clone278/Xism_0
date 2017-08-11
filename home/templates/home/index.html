@@ -1,0 +1,120 @@
+{% extends 'home/base.html' %}
+
+
+
+{% block content %}
+
+<!-- Flexslider
+	================================================== -->
+	<section id="home-slider">
+
+				<div class="slider">
+			<div class="flexslider">
+				<div class="slides">
+					<div>
+						<img src="/static/home/images/slider/carousel_software-development.png" alt="Software Development" />
+					</div>
+
+					<div>
+						<img src="/static/home/images/slider/carousel_product-design.jpg" alt="Product Design" />
+					</div>
+
+					<div>
+						<img src="/static/home/images/slider/carousel_ux.jpg" alt="UX" />
+					</div>
+
+                    <div>
+						<img src="/static/home/images/slider/carousel_futurism4.png" alt="Futurism" />
+					</div>
+
+				</div>
+			</div>
+
+			<div class="flexslider-nav-carousel">
+				<div class="container">
+					<div class="desktop-3 hide-under-tablet columns">
+						<div class="item-nav">
+							<h4>Software Development</h4>
+							<div class="line-separator"></div>
+							<span class="category">Open Source</span>
+
+						</div><!-- // .item-nav -->
+					</div><!-- // .desktop-3 -->
+
+					<div class="desktop-3 hide-under-tablet columns">
+						<div class="item-nav">
+							<h4>Product Design</h4>
+							<div class="line-separator"></div>
+							<span class="category">Creativity</span>
+
+						</div><!-- // .item-nav -->
+					</div><!-- // .desktop-3 -->
+
+					<div class="desktop-3 hide-under-tablet columns">
+						<div class="item-nav">
+							<h4>UX</h4>
+							<div class="line-separator"></div>
+							<span class="category">Genuine Value</span>
+						</div><!-- // .item-nav -->
+					</div><!-- // .desktop-3 -->
+
+					<div class="desktop-3 hide-under-tablet columns">
+						<div class="item-nav">
+							<h4>Trend Analysis</h4>
+							<div class="line-separator"></div>
+							<span class="category">Futurism</span>
+						</div><!-- // .item-nav -->
+					</div><!-- // .desktop-3 -->
+				</div><!-- // .container -->
+			</div><!-- // .flexslider-nav-carousel -->
+		</div><!-- // .slider -->
+
+
+		<div class="clear"></div>
+
+
+
+{% endblock %}
+
+{% block bodyscripts %}
+
+    <!-- JS
+	================================================== -->
+	<!--
+		Flexslider 2.1 has known issues of manualControls setting with jQuery 1.9~
+		Use jQuery 1.8 until Flexslider 2.2 stable version is released
+	-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+	<script src="/static/home/js/jQuery.BlackAndWhite.min.js"></script>
+	<script src="/static/home/js/modernizr.js"></script>
+	<script src="/static/home/js/less-1.4.0.min.js"></script>
+	<script src="/static/home/js/jquery.typeMenu.js"></script>
+	<script src="/static/home/js/jquery.typeSticky.js"></script>
+
+
+
+
+
+	<script src = "/static/home/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript">
+	$(window).load(function(){
+		$('.flexslider').flexslider({
+			animation: Modernizr.touch ? "slide" : "fade",
+			manualControls: ".flexslider-nav-carousel div.item-nav",
+			selector: ".slides > div",
+			start: function(slider){
+				$('body').removeClass('loading');
+			}
+		});
+	});
+
+	</script>
+
+
+
+
+
+
+	<script src="/static/home/js/jquery.custom.js"></script>
+
+{% endblock %}
